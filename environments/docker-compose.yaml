@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.2
+    restart: unless-stopped
+    expose:
+      - "1487"
+    ports:
+      - "1487:5432"
+    environment:
+      POSTGRES_USER: tutorial
+      POSTGRES_DB: tutorial_db
+      POSTGRES_PASSWORD: springbootrocks
